@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Jobs 2026 — Salary & Skills Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div>
+        <h1>Tech Jobs 2026</h1>
+        <p class="subtitle">Most in-demand roles · required skills · salary ranges — sorted highest to lowest pay</p>
+      </div>
+      <div class="header-meta">
+        <span class="badge badge-blue">10 roles</span>
+        <span class="badge badge-green">Live data · April 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats-row" id="stats"></section>
+
+    <section class="controls">
+      <input type="text" id="search" placeholder="Search roles or skills..." />
+      <select id="sort">
+        <option value="rank">Sort: Highest pay first</option>
+        <option value="title">Sort: A–Z</option>
+        <option value="salaryLow">Sort: Entry salary</option>
+      </select>
+    </section>
+
+    <div class="chart-wrap">
+      <canvas id="salaryChart" role="img" aria-label="Horizontal bar chart of mid salaries for the top 10 tech roles in 2026"></canvas>
+    </div>
+
+    <section id="job-list" class="job-list"></section>
+  </main>
+
+  <footer>
+    <p>Data sourced from <strong>Robert Half 2026 Salary Guide</strong>, <strong>Bureau of Labor Statistics</strong>, CIO.com, LSE Executive Education, Zero To Mastery, and Pace University (March 2026). Salaries in USD, US market.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
